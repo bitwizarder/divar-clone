@@ -1,0 +1,335 @@
+@import "tailwindcss";
+/* globals.css */
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --font-vazirmatn: "vazirmatn", sans-serif;
+
+  /* --primary-bg: #1a1a2e;
+  --sidebar-bg: #16213e;
+  --hover-bg: #0f3460;
+  --page-bg: #f5f7fb;
+  --border-color: rgb(252, 252, 252, 0.2);
+  --text-color: #ffffff;
+  --highlight-color: #e94560; */
+  /* رنگ‌های اصلی */
+  --color-background-page: #f5f7fb; /* پس‌زمینه صفحه */
+  --color-background-surface: #ffffff; /* پس‌زمینه کارت‌ها، مودال‌ها و بخش‌ها */
+  --color-background-primary: #1a1a2e; /* پس‌زمینه اصلی (هدر، سایدبار) */
+  --color-background-secondary: #16213e; /* پس‌زمینه ثانویه (سایدبار) */
+  --color-background-hover: #eff6ff; /* هاور در سایدبار */
+  --color-background-muted: #f1f3f5; /* پس‌زمینه‌های کم‌رنگ (مثل جداول) */
+
+  --color-text-primary: #1e293b; /* متن اصلی */
+  --color-text-secondary: #475569; /* متن ثانویه */
+  --color-text-muted: #94a3b8; /* متن کم‌رنگ */
+  --color-text-inverse: #ffffff; /* متن روی پس‌زمینه تیره */
+
+  --color-border: #e2e8f0; /* حاشیه‌ها */
+  --color-border-light: #f1f5f9; /* حاشیه‌های روشن‌تر */
+
+  --color-accent: #e94560; /* رنگ برجسته (دکمه‌ها، هایلایت) */
+  --color-icon: #155dfc;
+  --color-gray: #76798a;
+  --color-gray-light: #99a1af; /* text-gray-400 */
+  --color-gray-dark: #364153; /* text-gray-700 */
+  --color-gray-lighter: #f9fafb; /* text-gray-50 */
+
+  --color-accent-foreground: #ffffff; /* متن روی رنگ برجسته */
+
+  --color-success: oklch(69.6% 0.17 162.48); /* سبز موفقیت  (emerald 500)*/
+  --color-danger: #ef4444; /* قرمز خطا */
+  --color-warning: #f59e0b; /* زرد هشدار */
+
+  --color-text-btn: #ffffff;
+}
+
+/* ============================================
+   تم تاریک – Dark Theme
+   ============================================ */
+[data-theme="dark"] {
+  --color-background-page: #0f172a;
+  --color-background-surface: #1e293b;
+  --color-background-primary: #0f172a;
+  --color-background-secondary: #1e293b;
+  --color-background-hover: #334155;
+  --color-background-muted: #1e293b;
+  --color-text-primary: #fafafa;
+  /* --color-text-secondary: #cbd5e1; */
+  --color-text-secondary: #edf0f5;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #0f172a;
+
+  --color-border: #334155;
+  --color-border-light: #1e293b;
+
+  --color-accent: #f43f5d;
+  --color-icon: #60a5fa;
+  --color-gray: #8b8ea4;
+  --color-gray-dark: #5c6371; /* text-gray-700 */
+  --color-gray-light: #cad1dc;
+  --color-gray-lighter: #f9fafb0d; /* text-gray-50 */
+
+  --color-accent-foreground: #ffffff;
+
+  --color-success: oklch(69.6% 0.17 162.48);
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+
+  --color-text-btn: #ffffff;
+}
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
+@utility bg-page {
+  background-color: var(--color-background-page);
+}
+@utility bg-surface {
+  background-color: var(--color-background-surface);
+}
+@utility bg-primary {
+  background-color: var(--color-background-primary);
+}
+@utility bg-secondary {
+  background-color: var(--color-background-secondary);
+}
+@utility bg-hover {
+  background-color: var(--color-background-hover);
+}
+@utility bg-muted {
+  background-color: var(--color-background-muted);
+}
+@utility bg-gray {
+  background-color: var(--color-gray);
+}
+@utility bg-gray-light {
+  background-color: var(--color-gray-light);
+}
+@utility bg-gray-dark {
+  background-color: var(--color-gray-dark);
+}
+@utility bg-gray-lighter {
+  background-color: var(--color-gray-lighter);
+}
+
+@utility text-primary {
+  color: var(--color-text-primary);
+}
+@utility text-secondary {
+  color: var(--color-text-secondary);
+}
+@utility text-gray {
+  color: var(--color-gray);
+}
+@utility text-gray-light {
+  color: var(--color-gray-lighter);
+}
+@utility text-gray-light {
+  color: var(--color-gray-lighter);
+}
+@utility text-gray-dark {
+  color: var(--color-gray-dark);
+}
+input[type="checkbox"]:indeterminate {
+  @apply border-accent;
+}
+
+input[type="checkbox"]:indeterminate::before {
+  @apply opacity-100;
+  content: "−" !important;
+}
+
+@utility text-icon {
+  color: var(--color-icon);
+}
+@utility text-btn {
+  color: var(--color-text-btn);
+}
+@utility text-muted {
+  color: var(--color-text-muted);
+}
+@utility text-inverse {
+  color: var(--color-text-inverse);
+}
+@utility text-accent {
+  color: var(--color-accent);
+}
+
+@utility border-color {
+  border-color: var(--color-border);
+}
+@utility border-color-light {
+  border-color: var(--color-border-light);
+}
+@utility border-accent {
+  border-color: var(--color-accent);
+}
+@utility border-gray {
+  border-color: var(--color-gray);
+}
+@utility border-gray-light {
+  border-color: var(--color-gray-light);
+}
+@utility border-gray-dark {
+  border-color: var(--color-gray-dark);
+}
+@utility border-gray-lighter {
+  border-color: var(--color-gray-lighter);
+}
+@utility border-gray {
+  border-color: var(--color-gray);
+}
+
+@utility bg-accent {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+@utility bg-success {
+  background-color: var(--color-success);
+}
+
+@utility text-success {
+  color: var(--color-success);
+}
+
+@utility bg-danger {
+  background-color: var(--color-danger);
+}
+
+@utility text-danger {
+  color: var(--color-danger);
+}
+
+@utility bg-warning {
+  background-color: var(--color-warning);
+}
+
+@utility text-warning {
+  color: var(--color-warning);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  background: var(--color-background-page);
+}
+
+body {
+  font-family: var(--font-vazirmatn);
+  direction: rtl;
+  /* background: var(--page-bg); */
+  background: var(--color-background-page);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.auto-col-span-last > :last-child:nth-child(odd) {
+  grid-column: span 2 / span 2;
+}
+
+.ReactTags__remove svg {
+  fill: currentColor !important;
+}
+@utility font-vazirmatn {
+  font-family: "vazirmatn", sans-serif;
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@utility flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@utility flex-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@utility flex-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@utility flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* app/styles/globals.css */
+
+.rich-editor-wrapper .ck-editor__editable_inline {
+  min-height: 250px;
+  max-height: 500px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.rich-editor-wrapper .ck-editor__top {
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.dark .rich-editor-wrapper .ck-editor__editable_inline {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.dark
+  .rich-editor-wrapper
+  .ck.ck-editor__main
+  > .ck-editor__editable:not(.ck-focused) {
+  border-color: #374151;
+}
+
+/* تنظیمات RTL برای CKEditor */
+.rich-editor-wrapper .ck.ck-editor {
+  direction: rtl;
+}
+
+.rich-editor-wrapper .ck.ck-editor .ck-editor__editable {
+  text-align: right;
+}
+
+.rich-editor-wrapper .ck.ck-toolbar {
+  direction: rtl;
+}

@@ -1,0 +1,27 @@
+# ========== Laravel (Backend) ==========
+/backend/vendor/
+/backend/.env
+/backend/.env.*
+/backend/storage/*.key
+/backend/public/storage
+/backend/Homestead.json
+/backend/Homestead.yaml
+
+# ========== Next.js (Frontend) ==========
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+
+# ========== General ==========
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env*.local
+Thumbs.db
+_ide_helper.php
+.phpunit.cache
+.idea/
+.vscode/
