@@ -8,7 +8,8 @@
   <a href="#-features">Features</a> •
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-getting-started">Getting Started</a> •
-  <a href="#-real-time-chat">Real-time Chat</a>
+  <a href="#-real-time-chat">Real-time Chat</a> •
+  <a href="README.fa.md">راهنمای فارسی</a>
 </p>
 
 ![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
@@ -64,7 +65,7 @@ Install the following before continuing:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/divar-clone.git
+git clone https://github.com/bitwizarder/divar-clone.git
 cd divar-clone
 ```
 

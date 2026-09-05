@@ -19,6 +19,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules/
+.env
+.env.*
+!.env.example
 .env*.local
 Thumbs.db
 _ide_helper.php
