@@ -102,7 +102,6 @@ php artisan reverb:start
 
 ## بررسی کیفیت
 
-<div dir="ltr" align="left">
 
 ```bash
 # تست‌های Backend
@@ -116,9 +115,6 @@ php artisan test
 cd ../frontend
 npm run lint
 ```
-
-</div>
-
 ## ساختار پروژه
 
 <div dir="ltr" align="left">
