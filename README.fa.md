@@ -102,6 +102,8 @@ php artisan reverb:start
 
 ## بررسی کیفیت
 
+<div dir="ltr" align="left">
+
 ```bash
 # تست‌های Backend
 cd backend
@@ -115,7 +117,11 @@ cd ../frontend
 npm run lint
 ```
 
+</div>
+
 ## ساختار پروژه
+
+<div dir="ltr" align="left">
 
 ```text
 .
@@ -124,6 +130,8 @@ npm run lint
 ├── backend/routes/ # مسیرهای API، احراز هویت و Broadcast
 └── frontend/app/  # صفحات، Layoutها و کامپوننت‌های رابط کاربری
 ```
+
+</div>
 
 ## نکات امنیتی
 
